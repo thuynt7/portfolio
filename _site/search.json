@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The Shifting Economics of Local News",
+    "section": "",
+    "text": "Writing data journalism means letting your copy and your data interact. In traditional Markdown platforms, adding complex interactive grids or custom Javascript widgets breaks the framework. Quarto, however, gives us raw HTML blocks natively.\n\nThe Regional Breakdown\nBelow is where a responsive chart drops seamlessly into the narrative text:\n\n\n📊 [Your Datawrapper / Flourish Iframe Embed Goes Here]\n\nWhen you copy an embed code from your visualization tool, you’ll paste it right here."
+  }
+]

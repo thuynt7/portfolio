@@ -1,0 +1,21 @@
+---
+title: "The Shifting Economics of Local News"
+subtitle: "An empirical look at why regional papers are vanishing, and what is stepping into the void."
+author: "Your Name"
+date: "2026-06-25"
+---
+
+Writing data journalism means letting your copy and your data interact. In traditional Markdown platforms, adding complex interactive grids or custom Javascript widgets breaks the framework. Quarto, however, gives us raw HTML blocks natively.
+
+### The Regional Breakdown
+
+Below is where a responsive chart drops seamlessly into the narrative text:
+
+```{html}
+<!-- This special block passes raw HTML/JS code straight to the browser -->
+<div style="padding: 30px; background: #f9f9f9; border: 1px dashed #ccc; border-radius: 6px; margin: 20px 0; text-align: center;">
+  <strong>📊 [Your Datawrapper / Flourish Iframe Embed Goes Here]</strong>
+  <p style="font-size: 0.85em; color: #666; margin-top: 5px;">
+    When you copy an embed code from your visualization tool, you'll paste it right here.
+  </p>
+</div>
