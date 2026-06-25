@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "stories/housing-trends.html",
+    "href": "stories/housing-trends.html",
+    "title": "Mapping Urban Housing Trends",
+    "section": "",
+    "text": "This is your second independent story. Because the date is set to June 20th, it will automatically sit neatly right below your June 25th article on the homepage feed.\nYou can drop independent spreadsheets, scripts, or images right alongside this piece without cluttering your main site layout."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -9,8 +16,15 @@
   {
     "objectID": "index.html",
     "href": "index.html",
+    "title": "Thuy’s Thought Sketches",
+    "section": "",
+    "text": "Welcome to my portfolio. Explore my latest data pieces and reporting below.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Shifting Economics of Local News\n\n\nAn empirical look at why regional papers are vanishing.\n\n\n\nEconomics\n\nMedia\n\n\n\n\n\n\n\n\n\nJun 25, 2026\n\n\nYour Name\n\n\n\n\n\n\n\n\n\n\n\n\nMapping Urban Housing Trends\n\n\nA deep dive into regional pricing volatility over the last decade.\n\n\n\nHousing\n\nData Analysis\n\n\n\n\n\n\n\n\n\nJun 20, 2026\n\n\nYour Name\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "stories/local-news-economics.html",
+    "href": "stories/local-news-economics.html",
     "title": "The Shifting Economics of Local News",
     "section": "",
-    "text": "Writing data journalism means letting your copy and your data interact. In traditional Markdown platforms, adding complex interactive grids or custom Javascript widgets breaks the framework. Quarto, however, gives us raw HTML blocks natively.\n\nThe Regional Breakdown\nBelow is where a responsive chart drops seamlessly into the narrative text:\n\n\n📊 [Your Datawrapper / Flourish Iframe Embed Goes Here]\n\nWhen you copy an embed code from your visualization tool, you’ll paste it right here."
+    "text": "Writing data journalism means letting your copy and your data interact…\n\nThe Regional Breakdown\n\n📊 [Interactive Chart Embed Code Goes Here]"
   }
 ]

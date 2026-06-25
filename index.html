@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Your Name">
-<meta name="dcterms.date" content="2026-06-25">
 
-<title>The Shifting Economics of Local News – Thuy’s Thought Sketches</title>
+<title>Thuy’s Thought Sketches</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -35,6 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -44,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-26d9cc88ab9604001aabd73cb1ea1d8f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-99ae303eae55bd17ed04acc4dcb98adc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,7 +72,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -114,40 +172,22 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#the-regional-breakdown" id="toc-the-regional-breakdown" class="nav-link active" data-scroll-target="#the-regional-breakdown">The Regional Breakdown</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RGF0YSUyMEFuYWx5c2lz">Data Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RWNvbm9taWNz">Economics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SG91c2luZw==">Housing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWVkaWE=">Media <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">The Shifting Economics of Local News</h1>
-<p class="subtitle lead">An empirical look at why regional papers are vanishing, and what is stepping into the void.</p>
+<h1 class="title">Thuy’s Thought Sketches</h1>
+<p class="subtitle lead">Data journalism, investigations, and stories told through numbers.</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Your Name </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">June 25, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -157,22 +197,87 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Writing data journalism means letting your copy and your data interact. In traditional Markdown platforms, adding complex interactive grids or custom Javascript widgets breaks the framework. Quarto, however, gives us raw HTML blocks natively.</p>
-<section id="the-regional-breakdown" class="level3">
-<h3 class="anchored" data-anchor-id="the-regional-breakdown">The Regional Breakdown</h3>
-<p>Below is where a responsive chart drops seamlessly into the narrative text:</p>
-<!-- This special block passes raw HTML/JS code straight to the browser -->
-<div style="padding: 30px; background: #f9f9f9; border: 1px dashed #ccc; border-radius: 6px; margin: 20px 0; text-align: center;">
-<strong>📊 [Your Datawrapper / Flourish Iframe Embed Goes Here]</strong>
-<p style="font-size: 0.85em; color: #666; margin-top: 5px;">
-When you copy an embed code from your visualization tool, you’ll paste it right here.
-</p>
+<p>Welcome to my portfolio. Explore my latest data pieces and reporting below.</p>
+<hr>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="RWNvbm9taWNzJTJDTWVkaWE=" data-listing-date-sort="1782320400000" data-listing-file-modified-sort="1782375723325" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
+<div class="thumbnail"><a href="./stories/local-news-economics.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./stories/local-news-economics.html" class="no-external">The Shifting Economics of Local News</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./stories/local-news-economics.html" class="no-external">An empirical look at why regional papers are vanishing.</a>
 </div>
+<div class="listing-categories">
 
+<div class="listing-category" onclick="window.quartoListingCategory('RWNvbm9taWNz'); return false;">Economics</div>
 
-</section>
+<div class="listing-category" onclick="window.quartoListingCategory('TWVkaWE='); return false;">Media</div>
 
-</main> <!-- /main -->
+</div>
+<div class="delink listing-description"><a href="./stories/local-news-economics.html" class="no-external">
+Writing data journalism means letting your copy and your data interact…
+</a></div>
+</div>
+<div class="metadata">
+<a href="./stories/local-news-economics.html" class="no-external">
+<div class="listing-date">
+Jun 25, 2026
+</div>
+<div class="listing-author">
+Your Name
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="SG91c2luZyUyQ0RhdGElMjBBbmFseXNpcw==" data-listing-date-sort="1781888400000" data-listing-file-modified-sort="1782375769762" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="46">
+<div class="thumbnail"><a href="./stories/housing-trends.html" class="no-external">
+
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./stories/housing-trends.html" class="no-external">Mapping Urban Housing Trends</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./stories/housing-trends.html" class="no-external">A deep dive into regional pricing volatility over the last decade.</a>
+</div>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('SG91c2luZw=='); return false;">Housing</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMEFuYWx5c2lz'); return false;">Data Analysis</div>
+
+</div>
+<div class="delink listing-description"><a href="./stories/housing-trends.html" class="no-external">
+This is your second independent story. Because the date is set to June 20th, it will automatically sit neatly right below your June 25th article on the homepage feed.
+</a></div>
+</div>
+<div class="metadata">
+<a href="./stories/housing-trends.html" class="no-external">
+<div class="listing-date">
+Jun 20, 2026
+</div>
+<div class="listing-author">
+Your Name
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -246,7 +351,7 @@ When you copy an embed code from your visualization tool, you’ll paste it righ
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/thuynt7\.github\.io\/portfolio\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
